@@ -1,51 +1,26 @@
 import './App.css';
-import io from 'socket.io-client';
-import { useState } from 'react';
-import Chat from './pages/Chat';
-import Navigation from './components/Navigation';
-
-const socket = io.connect('http://localhost:8000');
-
+import Login from './pages/Login';
+import Chat from './components/Chat/ChatPage';
+// import Home from "../src/pages/Chat";
+import Home from '../src/pages/Home';
+import Join from './pages/Join';
+import Register from './pages/Register';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import socketIO from 'socket.io-client';
+import Edit from './pages/Edit';
 function App() {
-  const [username, setUsername] = useState('');
-  const [room, setRoom] = useState('');
-  const [showChat, setShowChat] = useState(false);
-
-  const joinRoom = () => {
-    if (username !== '' && room !== '') {
-      socket.emit('join_room', room);
-      setShowChat(true);
-    }
-  };
-
+  const socket = socketIO.connect(process.env.REACT_APP_BACKEND_API_HOST);
   return (
-    <div className="App">
-      <Navigation />
-      {!showChat ? (
-        <div className="container" align="center">
-          <div className="joinChatContainer">
-            <h3>Join A Chat</h3>
-            <input
-              type="text"
-              placeholder="John..."
-              onChange={(event) => {
-                setUsername(event.target.value);
-              }}
-            />
-            <input
-              type="text"
-              placeholder="Room ID..."
-              onChange={(event) => {
-                setRoom(event.target.value);
-              }}
-            />
-            <button onClick={joinRoom}>Join A Room</button>
-          </div>
-        </div>
-      ) : (
-        <Chat socket={socket} username={username} room={room} />
-      )}
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/chat" element={<Chat socket={socket} />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/edit" element={<Edit />} />
+        <Route path="/join" element={<Join socket={socket} />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
