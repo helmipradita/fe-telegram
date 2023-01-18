@@ -5,7 +5,7 @@ import right from '../../components/Chat/ChatBody.module.css';
 import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Menu from '../../assets/Menu.png';
-import { Card, Dropdown, Form, Tab, Tabs } from 'react-bootstrap';
+import { Badge, Card, Dropdown, Form, Tab, Tabs } from 'react-bootstrap';
 import ScrollToBottom from 'react-scroll-to-bottom';
 
 const Home = () => {
@@ -39,7 +39,7 @@ const Home = () => {
         },
       })
       .then((response) => {
-        console.log(response);
+        console.log(response, 'response');
         setList(response.data.data);
       })
       .catch((error) => {
@@ -48,7 +48,7 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    const socket = io(process.env.REACT_APP_BACKEND_API_HOST);
+    const socket = io('http://localhost:8000/');
     socket.on('send-message-response', (response) => {
       // set receiver
       const receiver = JSON.parse(localStorage.getItem('receiver'));
@@ -104,7 +104,6 @@ const Home = () => {
 
     socketio.emit('chat-history', data);
   };
-  console.log(self, 'ini dari user payload');
 
   const handleLeaveChat = () => {
     localStorage.clear();
@@ -218,8 +217,17 @@ const Home = () => {
                       <Card className="mt-2 col-md-7 offset-md-5">
                         <Card.Body key={item.id}>
                           <div className="row ">
-                            <p className="text-secondary"> {item.sender}</p>
+                            <p className="text-secondary">
+                              <Badge bg="primary">{item.sender}</Badge>{' '}
+                            </p>
                             <p>{item.message}</p>
+                            <p
+                              style={{ fontSize: '13px' }}
+                              className="text-secondary"
+                              align="right"
+                            >
+                              {item.created_at}
+                            </p>
                           </div>
                         </Card.Body>
                       </Card>
@@ -229,8 +237,17 @@ const Home = () => {
                       <Card align="left" className="mt-2 col-md-7 ">
                         <Card.Body key={item.id}>
                           <div className="row ">
-                            <p className="text-secondary"> {item.sender}</p>
+                            <p className="text-secondary">
+                              <Badge bg="success">{item.sender}</Badge>{' '}
+                            </p>
                             <p>{item.message}</p>
+                            <p
+                              style={{ fontSize: '13px' }}
+                              className="text-secondary"
+                              align="right"
+                            >
+                              {item.created_at}
+                            </p>
                           </div>
                         </Card.Body>
                       </Card>
