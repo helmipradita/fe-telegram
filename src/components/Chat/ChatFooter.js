@@ -1,15 +1,10 @@
 import React, { useState } from 'react';
 import style from './ChatFooter.module.css';
+
 const ChatFooter = ({ socket }) => {
-  const name = localStorage.getItem('name');
   const [message, setMessage] = useState('');
   const handleTyping = () =>
     socket.emit('typing', `${localStorage.getItem('name')} is typing`);
-
-  const handleSubmit = () => {
-    const name = localStorage.getItem('name');
-    socket.emit('newUser', { name, socketID: socket.id });
-  };
 
   const handleSendMessage = (e) => {
     e.preventDefault();

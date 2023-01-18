@@ -6,10 +6,9 @@ import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Menu from '../../assets/Menu.png';
 import { Card, Dropdown, Form, Tab, Tabs } from 'react-bootstrap';
-import ScrollToBottom, { useScrollToBottom } from 'react-scroll-to-bottom';
+import ScrollToBottom from 'react-scroll-to-bottom';
 
 const Home = () => {
-  const scrollToBottom = useScrollToBottom();
   const [socketio, setSocketIo] = useState(null);
   const [listchat, setListchat] = useState([]);
   const [message, setMessage] = useState();
@@ -24,13 +23,21 @@ const Home = () => {
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem('user'));
     const data = user;
+    const token = user.token;
 
     setLogin(user);
 
     console.log(data, 'ini data');
 
+    const users_id = user.id;
+
     axios
-      .get(process.env.REACT_APP_BACKEND_API_HOST + '/users/all')
+      .get(process.env.REACT_APP_BACKEND_API_HOST + `/users/all/${users_id}`, {
+        'content-type': 'multipart/form-data',
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
       .then((response) => {
         console.log(response);
         setList(response.data.data);

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import style from './ChatBody.module.css';
-// import Hover from '../../../../assets/Hover.png';
+
 const ChatBody = ({ listchat, login }) => {
   const navigate = useNavigate();
   const name = localStorage.getItem('name');
@@ -58,27 +58,6 @@ const ChatBody = ({ listchat, login }) => {
             )}
           </div>
         ))}
-        {/* {messages.map((message) =>
-          message.name === localStorage.getItem("name") ? (
-            <div className={style.chats} key={message.id}>
-              <div className="chat chat-end">
-                <p className={style.senderName}>You</p>
-                <div className="chat-bubble chat-bubble-success">
-                  <p>{message.text}</p>
-                </div>
-              </div>
-            </div>
-          ) : (
-            <div className={style.chats} key={message.id}>
-              <p>{message.name}</p>
-              <div className="chat chat-start">
-                <div className="chat-bubble chat-bubble-secondary">
-                  <p>{message.text}</p>
-                </div>
-              </div>
-            </div>
-          )
-        )} */}
       </div>
     </>
   );

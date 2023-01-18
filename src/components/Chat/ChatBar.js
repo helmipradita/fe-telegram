@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import style from './ChatBar.module.css';
-import { Image } from 'react-bootstrap';
 
-// import Profile2 from '../../../../assets/Profile2.jpg';
 const ChatBar = ({ socket }) => {
   const [users, setUsers] = useState([]);
 
@@ -15,7 +13,6 @@ const ChatBar = ({ socket }) => {
       <h2 style={{ color: '#7e98df', fontWeight: '700' }}>Chat App</h2>
       <div className="row">
         <div className="flex">
-          {/* <img className="" src={Profile2}></img> */}
           <h4 className="self-center flex">asasasasas</h4>
         </div>
       </div>
