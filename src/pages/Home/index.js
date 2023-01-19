@@ -48,7 +48,7 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    const socket = io('http://localhost:8000/');
+    const socket = io(process.env.REACT_APP_BACKEND_API_HOST);
     socket.on('send-message-response', (response) => {
       // set receiver
       const receiver = JSON.parse(localStorage.getItem('receiver'));
