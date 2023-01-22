@@ -63,8 +63,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 
 ## Related Project
-* [`Backend Project Recipe `](https://github.com/helmipradita/be-telegram)
-* [`REST API Recipe`](https://api-telegram.helmipradita.dev)
+* [`Backend Project Telegram `](https://github.com/helmipradita/be-telegram)
+* [`REST API Telegram`](https://api-telegram.helmipradita.dev)
 
 ## Contact
 
