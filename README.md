@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+## Table of Contents
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+* [About the Project](#about-the-project)
+  * [Built With](#built-with)
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+* [Screenshot](#screenshot)
+* [Related Project](#related-project)
+* [Contact](#contact)
 
-## Available Scripts
+## About The Project
 
-In the project directory, you can run:
+Telegram app is a website that is used to send messages to all users in real time. This Telegram app uses socket.io technology which can send and receive messages in real time plus it uses React JS so that without reloading the browser we can get the latest messages from our interlocutors in the application. [demo recipe](https://telegram.helmipradita.dev/)
 
-### `npm start`
+### Built With
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* [Node JS](https://nodejs.org/en/docs/)
+* [React.js](https://reactjs.org/) project bootstrapped with [`create-react-app`](https://github.com/facebook/react/).
+* [Socket.io](https://socket.io/) Bidirectional and low-latency communication for every platform
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This is an example of how to list things you need to use the software and how to install them.
 
-### `npm run build`
+* [nodejs](https://nodejs.org/en/download/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repo
+```bash
+git clone https://github.com/helmipradita/fe-telegram
+```
+2. Install NPM packages
+```bash
+npm install
+```
+3. Add .env file at root folder project, and add following or use your own
+```bash
+REST_API=https://api-telegram.helmipradita.dev
+```
+4. Run the development server:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-### `npm run eject`
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Screenshot
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| Landing Page | All Chats | Room Chats |
+| ------------- | ------------- | ------------- |
+| ![landing page](https://i.imgur.com/v95lAp0.png) | ![allchats](https://i.imgur.com/07EyMad.png) | ![roomchats](https://i.imgur.com/SYlKCEp.png) |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+| Login Page | Register Page | Alert success login |
+| ------------- | ------------- | ------------- |
+| ![login](https://i.imgur.com/kap3YOJ.png) | ![register](https://i.imgur.com/vmwjvMd.png) | ![alert](https://i.imgur.com/ckdsMsI.png) |
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Related Project
+* [`Backend Project Recipe `](https://github.com/helmipradita/be-telegram)
+* [`REST API Recipe`](https://api-telegram.helmipradita.dev)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contact
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Contributors names and contact info Fullstack Developers
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Helmi Pradita [@helmipradita](https://github.com/helmipradita)
