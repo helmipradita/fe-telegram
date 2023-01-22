@@ -55,7 +55,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 | Landing Page | All Chats | Room Chats |
 | ------------- | ------------- | ------------- |
-| ![landing page](https://i.imgur.com/v95lAp0.png) | ![allchats](https://i.imgur.com/07EyMad.png) | ![roomchats](https://i.imgur.com/SYlKCEp.png) |
+| ![landing page](https://i.imgur.com/v95lAp0.png) | ![allchats](https://i.imgur.com/0GMolgJ.png) | ![roomchats](https://i.imgur.com/SYlKCEp.png) |
 
 | Login Page | Register Page | Alert success login |
 | ------------- | ------------- | ------------- |
