@@ -1,3 +1,23 @@
+<br />
+<p align="center">
+
+  <h3 align="center">Telegram App</h3>
+  <p align="center">
+    <image align="center" width="200" src='https://res.cloudinary.com/dnu5su7ft/image/upload/v1674602322/Telegram_w0ulpa.png' />
+  </p>
+
+  <p align="center">
+    <br />
+    <a href="https://github.com/helmipradita/fe-telegram"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://telegram.helmipradita.dev">View Demo</a>
+  </p>
+</p>
+
+
+
+
 ## Table of Contents
 
 * [About the Project](#about-the-project)
